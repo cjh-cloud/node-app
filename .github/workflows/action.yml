@@ -1,4 +1,10 @@
-- name: Webhook
-  uses: SenorGrande/actions@develop
-  env:
-    INPUT_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }} 
+name: Webhook
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  webhook:
+    uses: SenorGrande/actions@develop
+    env:
+        INPUT_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }} 
