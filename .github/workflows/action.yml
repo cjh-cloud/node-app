@@ -5,6 +5,9 @@ on:
 
 jobs:
   webhook:
-    uses: SenorGrande/actions@develop
-    env:
-        INPUT_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }} 
+    name: Webhook actions
+    runs-on: ubuntu-latest
+    steps:
+    - uses: SenorGrande/actions@develop
+      env:
+      INPUT_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }} 
