@@ -1,13 +1,13 @@
 name: Webhook
-on:
-  push:
-    branches: [ master ]
+on: push
 
 jobs:
   webhook:
     name: Webhook actions
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
+    - name: Run NPM Test & POST
     - uses: SenorGrande/actions@develop
       env:
         INPUT_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }} 
