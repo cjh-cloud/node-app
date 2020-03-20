@@ -1,4 +1,4 @@
-name: Webhook Node.js Test Results
+- name: Webhook Node.js Test Results
   uses: SenorGrande/actions@develop
   env:
-    INPUT_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+    INPUT_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }} 
