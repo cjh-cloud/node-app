@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run NPM Test & POST
-      uses: SenorGrande/actions@master
+      uses: SenorGrande/test-webhook@master
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }} 
