@@ -10,4 +10,4 @@ jobs:
     - name: Run NPM Test & POST
       uses: SenorGrande/actions@master
       env:
-        INPUT_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }} 
+        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }} 
