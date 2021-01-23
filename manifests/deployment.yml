@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: senorgrandenodeapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: senorgrandenodeapp
+  template:
+    metadata:
+      labels:
+        app: senorgrandenodeapp 
+    spec:
+      containers:
+        - name: senorgrandenodeapp 
+          image: testaksapp.azurecr.io/senorgrandenodeapp
+          ports:
+          - containerPort: 8080
